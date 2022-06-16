@@ -4,7 +4,7 @@ import inspect
 import os
 
 
-class ZMQLib(CMake):
+class libzmq(CMake):
 
     def __init__(self, path):
         super().__init__(path)
@@ -14,12 +14,9 @@ class ZMQLib(CMake):
 
         self._git_url = "git@github.com:zeromq/libzmq.git"
         self._git_branch = "master"
-        # self._git_tag = "v4.3.482"
         self._git_clone_dir = "src"
         self._cmakelist_path = "src"
 
         self._cmake_options = {
             "WITH_TLS": "OFF"
         }
-
-        # self._path = os.path.relpath(inspect.getfile(self.__class__))
